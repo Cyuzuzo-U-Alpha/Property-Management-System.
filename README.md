@@ -2,7 +2,7 @@ This Project is called Property Management System with User Interface and Featur
 
 
 It Contains:
-Django templates and forms.
-Implement user authentication and authorization.
-Develop interactive features like search, filtering, and dashboards.
-User experience (UX) in web application design.
+Django templates and forms,
+Implement user authentication and authorization,
+Develop interactive features like search, filtering, and dashboards,
+And User experience (UX) in web application design.
