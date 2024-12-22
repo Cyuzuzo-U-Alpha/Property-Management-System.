@@ -1,0 +1,8 @@
+<h3>My Properties</h3>
+{% for property in properties %}
+    <div>
+        <h4>{{ property.name }}</h4>
+        <p>{{ property.address }}</p>
+        <p>Tenants: {{ property.tenants.count }}</p>
+    </div>
+{% endfor %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Properties</h2>
+    <ul>
+       {% for property in properties %}
+   {{ property.name }} - {{ property.address }}
+   {% endfor %} 
+    </ul>
+    
+    <h2>Tenants</h2>
+    <ul>
+     {% for tenant in tenants %}
+   {{ tenant.name }} - {{ tenant.email }}
+   {% endfor %}  
+    </ul>
+
+    <h2>Leases</h2>
+    <ul>
+     {% for lease in leases %}
+    {{ lease.property }} - {{ lease.tenant }}
+    {% endfor %}   
+    </ul>
+    <h2>Units</h2>
+  <ul>
+   {% for unit in units %}
+  {{ unit.property }} - {{ unit.tenant }}
+  {% endfor %}     
+  </ul>
+</body>
+</html>

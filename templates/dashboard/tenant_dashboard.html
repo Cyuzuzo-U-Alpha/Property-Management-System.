@@ -1,0 +1,8 @@
+<h3>My Lease</h3>
+<p>Property: {{ lease.property.name }}</p>
+<p>Rent: ${{ lease.rent }}</p>
+<form method="post" action="{% url 'submit_maintenance_request' %}">
+    {% csrf_token %}
+    <t name="description" placeholder="Describe your issue"></t>
+    <button type="submit">Submit</button>
+</form>
