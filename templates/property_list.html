@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+<h1>Properties</h1>
+    <form method="get">
+        <label for="search">Search by name:</label>
+        <input type="text" id="search" name="q" placeholder="Enter property name" value="  ">
+        <button type="submit">Search</button>
+    </form>
+    <form method="post">
+        
+        <button type="submit">Login</button>
+    </form>
+        <div>
+            <img src="{{property.image.url}}" alt="house">
+            <h2> property.name </h2>
+            <p> property.address </p>
+            <p>Type: property.property_type </p>
+            <p>Rent: RWF property.rent </p>
+        </div>
+
+{% block content %}
+<h2>Search Properties</h2>
+<form method="get" action="{% url 'search_properties' %}">
+  <label for="search">Search by properties</label>
+    < type="text" name="q" placeholder="Search by name or address">
+    <button type="submit">Search</button>
+</form>
+
+<h3>Property Listings</h3>
+{% for property in properties %}
+    <div>
+        <h4>{{ property.name }}</h4>
+        <p>{{ property.address }}</p>
+        <p>${{ property.price }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
